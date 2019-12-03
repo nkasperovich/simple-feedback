@@ -1,0 +1,25 @@
+{
+  "name": "itransition/simple-feedback",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-only",
+  "description": "Test feedback plugin",
+  "homepage": "https://github.com/nkasperovich/simple-feedback",
+  "authors": [
+    {
+      "name": "Nikolay Kasperovich",
+      "email": "n.kasperovich@itransition.com",
+      "homepage": "https://github.com/nkasperovich"
+    }
+  ],
+  "keywords": [
+    "wordpress",
+    "feedback"
+  ],
+  "support": {
+    "issues": "https://github.com/daggerhart/openid-connect-generic/issues"
+  },
+  "require": {
+    "php": ">=5.3.3",
+    "composer/installers": "~1.0"
+  }
+}
