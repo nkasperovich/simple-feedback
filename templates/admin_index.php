@@ -2,7 +2,7 @@
     <h1>View Feedbacks</h1>
 </div>
 <?php
-$sql = "SELECT * FROM wp_feedbacks";
+$sql = "SELECT name, email, subject, text FROM wp_feedbacks";
 $results = $wpdb->get_results($sql);
 if (count($results)) : ?>
     <table>

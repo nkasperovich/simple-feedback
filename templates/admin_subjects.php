@@ -1,6 +1,7 @@
 <?php
 if (isset($_POST['add_new']) && $_POST['action'] == 'add_new_subject') {
     $subject = htmlspecialchars($_POST['subject']);
+
     try {
         global $wpdb;
         $table_name = $wpdb->prefix . 'subjects';
@@ -11,9 +12,11 @@ if (isset($_POST['add_new']) && $_POST['action'] == 'add_new_subject') {
     } catch (Exception $e) {
         echo $e;
     }
+
 } elseif (isset($_POST['delete_subject'])) {
     $id = $_POST['delete_subject_id'];
     $table_name = $wpdb->prefix . 'subjects';
+
     try {
         $wpdb->delete($table_name, array('id' => $id));
         echo 'Subject deleted';
@@ -34,10 +37,10 @@ else { ?>
             </tr>
         </table>
         <input type="submit" name="add_new" class="button button-primary" value="Add subject">
-        <?php
-            $sql = "SELECT * FROM wp_subjects";
+         <? $sql = "SELECT * FROM wp_subjects";
             $results = $wpdb->get_results($sql);
-            if (count($results)) : ?>
+            ?>
+            <? if (count($results)) : ?>
                 <h3>List of subjects</h3>
             <table>
                 <thead>
@@ -47,18 +50,16 @@ else { ?>
                 </tr>
                 </thead>
                 <input type="hidden" name="delete_subject_id" value="">
-                <?
-                foreach ($results as $result) :?>
+                <? foreach ($results as $result) :?>
                     <tr>
                         <td><? echo $result->subject; ?></td>
                         <td><? echo '<input type="hidden" name="subject_id" value="' . $result->id . '"><input type="submit" name="delete_subject" class="button action" value="delete"/>' ?></td>
                     </tr>
-                <? endforeach;
-                ?>
+                <? endforeach; ?>
             </table>
-        <? else :
-            echo 'no data';
-        endif;
+        <? else : ?>
+            <div>no data</div>;
+        <? endif;
         echo '</form></div>';
         }
         ?>
