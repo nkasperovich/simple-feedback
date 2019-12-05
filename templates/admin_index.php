@@ -24,6 +24,6 @@ if (count($results)) : ?>
         <? endforeach;
         ?>
     </table>
-<? else :
-    echo 'no data';
-endif;
+<? else :?>
+    <div>no data</div>
+<? endif;

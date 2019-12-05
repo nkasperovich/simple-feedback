@@ -77,6 +77,7 @@ class Feedback_Admin
         $sql = $sql . "CREATE TABLE $table_name_subjects (
 		id mediumint(9) NOT NULL AUTO_INCREMENT,
 		subject text NOT NULL,
+		email varchar(55) NOT NULL,
 		PRIMARY KEY  (id)
 	) $charset_collate;";
 
