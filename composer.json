@@ -1,5 +1,6 @@
 {
   "name": "nkasperovich/simple-feedback",
+  "type": "wordpress-plugin",
   "license": "GPL-2.0-only",
   "description": "Test feedback plugin",
   "homepage": "https://github.com/nkasperovich/wordpress",
