@@ -1,6 +1,5 @@
 {
   "name": "nkasperovich/simple-feedback",
-  "type": "wordpress-plugin",
   "license": "GPL-2.0-only",
   "description": "Test feedback plugin",
   "homepage": "https://github.com/nkasperovich/wordpress",
@@ -22,11 +21,7 @@
     }
   ],
   "require": {
-    "php": ">=5.3.3"
-  },
-  "extra": {
-    "installer-paths": {
-      "vendor/nkasperovich/simple-feedback": ["nkasperovich/simple-feedback"]
-    }
+    "php": ">=5.3.3",
+    "composer/installers": "v1.0.6"
   }
 }
