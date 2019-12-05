@@ -23,5 +23,10 @@
   ],
   "require": {
     "php": ">=5.3.3"
+  },
+  "extra": {
+    "installer-paths": {
+      "vendor/nkasperovich/simple-feedback": ["nkasperovich/simple-feedback"]
+    }
   }
 }
