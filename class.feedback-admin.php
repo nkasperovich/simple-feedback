@@ -66,7 +66,6 @@ class Feedback_Admin
         global $wpdb;
         $table_name_feedbacks = $wpdb->prefix . 'feedbacks';
         $table_name_subjects = $wpdb->prefix . 'subjects';
-        $table_name_subjects = $wpdb->prefix . 'feedback_settings';
 
         $charset_collate = $wpdb->get_charset_collate();
 
@@ -82,14 +81,6 @@ class Feedback_Admin
 		id mediumint(9) NOT NULL AUTO_INCREMENT,
 		subject text NOT NULL,
 		email varchar(55) NOT NULL,
-		PRIMARY KEY  (id)
-	) $charset_collate;";
-        $sql = $sql . "CREATE TABLE $table_name_subjects (
-		id mediumint(9) NOT NULL AUTO_INCREMENT,
-		mail_host varchar(25) NOT NULL,
-		host_port varchar(10) NOT NULL,
-		host_user varchar(55) NOT NULL,
-		host_pass varchar(55) NOT NULL,
 		PRIMARY KEY  (id)
 	) $charset_collate;";
 
