@@ -11,11 +11,11 @@ global $wpdb;
 
      add_action('phpmailer_init', function($phpmailer) use ($name, $email) {
          $phpmailer->isSMTP();
-         $phpmailer->Host = 'smtp.mailtrap.io';
+         $phpmailer->Host = '';
          $phpmailer->SMTPAuth = true;
-         $phpmailer->Port = 2525;
-         $phpmailer->Username = '5805174c16b177';
-         $phpmailer->Password = '3d825e27f80ba3';
+         $phpmailer->Port = '';
+         $phpmailer->Username = '';
+         $phpmailer->Password = '';
          $phpmailer->From = $email;
          $phpmailer->FromName= $name;
      });
