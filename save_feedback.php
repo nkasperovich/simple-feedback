@@ -10,12 +10,6 @@ global $wpdb;
      $message = htmlspecialchars($_POST['message']);
 
      add_action('phpmailer_init', function($phpmailer) use ($name, $email) {
-         $phpmailer->isSMTP();
-         $phpmailer->Host = '';
-         $phpmailer->SMTPAuth = true;
-         $phpmailer->Port = '';
-         $phpmailer->Username = '';
-         $phpmailer->Password = '';
          $phpmailer->From = $email;
          $phpmailer->FromName= $name;
      });

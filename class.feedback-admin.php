@@ -45,14 +45,6 @@ class Feedback_Admin
             'feedback_admin_subjects',
             array( 'Feedback_Admin',  'feedback_subjects')
         );
-        add_submenu_page(
-            'feedback_admin_show_feedbacks',
-            'Settings',
-            'Settings',
-            'manage_options',
-            'feedback_admin_settings',
-            array( 'Feedback_Admin',  'feedback_settings')
-        );
     }
 
     public function feedback_index()

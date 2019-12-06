@@ -23,6 +23,7 @@
   ],
   "require": {
     "php": ">=5.3.3",
-    "composer/installers": "v1.0.6"
+    "composer/installers": "v1.0.6",
+    "wpackagist-plugin/wp-mail-smtp": "1.5.0"
   }
 }
