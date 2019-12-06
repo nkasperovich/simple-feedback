@@ -44,7 +44,6 @@ class Feedback_Admin
             'manage_options',
             'feedback_admin_subjects',
             array( 'Feedback_Admin',  'feedback_subjects')
-
         );
     }
 
@@ -57,12 +56,17 @@ class Feedback_Admin
     {
         load_template(plugin_dir_path( __FILE__ ).'/templates/admin_subjects.php');
     }
+    public function feedback_settings()
+    {
+        load_template(plugin_dir_path( __FILE__ ).'/templates/admin_settings.php');
+    }
 
     function feedbacks_install()
     {
         global $wpdb;
         $table_name_feedbacks = $wpdb->prefix . 'feedbacks';
         $table_name_subjects = $wpdb->prefix . 'subjects';
+        $table_name_subjects = $wpdb->prefix . 'feedback_settings';
 
         $charset_collate = $wpdb->get_charset_collate();
 
@@ -77,6 +81,15 @@ class Feedback_Admin
         $sql = $sql . "CREATE TABLE $table_name_subjects (
 		id mediumint(9) NOT NULL AUTO_INCREMENT,
 		subject text NOT NULL,
+		email varchar(55) NOT NULL,
+		PRIMARY KEY  (id)
+	) $charset_collate;";
+        $sql = $sql . "CREATE TABLE $table_name_subjects (
+		id mediumint(9) NOT NULL AUTO_INCREMENT,
+		mail_host varchar(25) NOT NULL,
+		host_port varchar(10) NOT NULL,
+		host_user varchar(55) NOT NULL,
+		host_pass varchar(55) NOT NULL,
 		PRIMARY KEY  (id)
 	) $charset_collate;";
 
